@@ -6,9 +6,27 @@ class Pages extends BaseController
 {
     public function index()
     {
-        echo view('layout/header');
-        echo view('pages/home');
-        echo view('layout/footer');
-        
+        $data = [
+            'title' => 'Home | Bapas II PEKANBARU'
+        ];
+
+        return view('pages/home', $data);
     }
+
+    public function profile()
+    {
+        $data = [
+            'title' => 'Profile | Bapas II PEKANBARU'
+        ];
+        return view('pages/profile', $data);
+    }
+
+    public function sejarah()
+    {
+        $data = [
+            'title' => 'Sejarah | Bapas II PEKANBARU'
+        ];
+        return view('pages/sejarah', $data);
+    }
+    
 }
